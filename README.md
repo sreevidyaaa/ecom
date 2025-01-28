@@ -1,2 +1,2 @@
 # ecom
-full stack - e commerce websit
+full stack - e commerce website
