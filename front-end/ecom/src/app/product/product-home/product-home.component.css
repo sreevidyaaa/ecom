@@ -46,6 +46,7 @@
     background-color: rgb(230, 229, 229); 
     justify-content: center;
     margin: .5rem;
+    cursor: pointer;
 }
 
 .product-list-text{

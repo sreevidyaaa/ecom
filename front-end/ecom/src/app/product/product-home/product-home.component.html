@@ -1,3 +1,8 @@
+<!-- <h2>Product Home</h2>
+<nav>
+  <a routerLink="/product/home">Homeie</a> | 
+  <a routerLink="/product/bags">Bagsie</a>
+</nav> -->
 <!-- intial - unwanted -->
 <!-- <p>product-list works!</p> -->
 <!-- for web based content -->
@@ -33,7 +38,7 @@
 </div>
 
 <div class="product-list-container">
-    <div class="product-list">
+    <div class="product-list" [routerLink]="['/product/bags']">
         <img class="product-list-img" src="https://ik.imagekit.io/sreevidya/products/bags_300_vKpy1UGw8.png?updatedAt=1738246602082">
         <h5 class="product-list-text">Bags</h5>
     </div>
@@ -50,3 +55,5 @@
         <h5 class="product-list-text">Accessories</h5>
     </div>
 </div>
+
+<router-outlet></router-outlet>

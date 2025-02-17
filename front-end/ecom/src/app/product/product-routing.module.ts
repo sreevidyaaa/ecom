@@ -1,17 +1,34 @@
-import {  NgModule } from "@angular/core";
-import { RouterModule , Routes } from "@angular/router";
+// import {  NgModule } from "@angular/core";
+// import { RouterModule , Routes } from "@angular/router";
+// import { ProductHomeComponent } from "./product-home/product-home.component";
+
+// const routes : Routes = [
+//     {
+//         path : 'lists',
+//         component : ProductHomeComponent
+//     }
+// ];
+
+// @NgModule({
+//     imports:[RouterModule.forChild(routes)],
+//     exports:[RouterModule],
+// })
+
+// export class ProductRoutingModule {}
+
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 import { ProductHomeComponent } from "./product-home/product-home.component";
 
-const routes : Routes = [
+const routes: Routes = [
     {
-        path : 'lists',
-        component : ProductHomeComponent
+        path: '',
+        component: ProductHomeComponent
     }
 ];
 
 @NgModule({
-    imports:[RouterModule.forChild(routes)],
-    exports:[RouterModule],
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-
 export class ProductRoutingModule {}

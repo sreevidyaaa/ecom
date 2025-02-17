@@ -74,7 +74,8 @@ export class ProductService {
             shippings, 
             sex, 
             brands, 
-            category }= updateProductDto ; 
+            category,
+            subcategory }= updateProductDto ; 
 
             const findProduct = await this.productRepository.findOne({ where: { id } })
 
@@ -97,6 +98,8 @@ export class ProductService {
             sex && (updateProduct.sex = sex);
             brands && (updateProduct.brands = brands);
             category && (updateProduct.category= category);
+            subcategory && (updateProduct.subcategory= subcategory);
+
 
             await this.productRepository.update(id,  updateProduct); 
 

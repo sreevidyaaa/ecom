@@ -39,5 +39,8 @@ export class ProductEntity {
 
     @Column('text')
     category:  string
+
+    @Column('text',{nullable: true})
+    subcategory:  string
     
 }
