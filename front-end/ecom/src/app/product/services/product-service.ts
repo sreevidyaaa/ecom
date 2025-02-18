@@ -12,5 +12,12 @@ export class ProductService{
     getProducts() {                           //piping - what kind of data passes through it
         return this.hhtp.get(this.apiURL+'/product')   //get  method to get the product - now it would be 'http://localhost:3000/product'
     }
-}
 
+    getProductsBySubCategory(id: any){
+        return this.hhtp.get(this.apiURL+'/product/category/' + id)
+    }
+
+    getProductDetailById(id:any){
+        return this.hhtp.get(this.apiURL + '/product/' + id)
+    }
+}

@@ -2,57 +2,49 @@
     display : flex;
     justify-content: space-between;
     margin: .5rem;  /*here on all four sides since side is not specified*/
-}
-
-.collection-header{
+  }
+  
+  .collection-header{
     font-weight: 600;
     font-size: 2rem;
-}
-
-.header{
+    text-align: center;
+  }
+  
+  .header{
     /* margin-top: 50px; or*/
-    margin-top: 4rem; /*1rem=16px*/
-    margin-bottom:4rem;
-    /* margin-left: 2.9rem; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-/* Landing IMG start */
-.land-img{
-    width:100%;
-}
-.container{
-    position: relative;
-}
-
-/* Landing IMG end */
-
-.btn-container{
+    margin-top: 1rem; /*1rem=16px*/
+    margin-left: 2.9rem;
+  
+  }
+  .banner{
+    max-width: 100%;
+  
+  }
+  
+  .btn-container{
     display: flex;
     justify-content: space-evenly;
-    margin-top:  3rem;
+    margin-top:  1rem;
     margin-left: 1rem;
     /* font-weight: 700;.btn-container class does not directly apply styles to the <h4> */
-}
-
-.btn {
+  }
+  
+  .btn {
     font-weight: 700;
     color: rgb(154, 152, 152);
-}
-
-.btn:hover{                   /*what happens when we hover*/
+  }
+  
+  .btn:hover{                   /*what happens when we hover*/
     color:black;
     cursor: pointer;
-}
-
-.product-list-img{
+  }
+  
+  .product-list-img{
     width: 140px;
     margin: 0 auto;
-}
-
-.product-list{
+  }
+  
+  .product-list{
     display: flex;
     flex-direction: column;
     height: 180px;
@@ -60,18 +52,21 @@
     background-color: rgb(230, 229, 229); 
     justify-content: center;
     margin: .5rem;
-    cursor: pointer;
-}
-
-.product-list-text{
+  }
+  
+  .product-list-text{
     margin: 0 auto;
     font-weight: 600;
     font-size: medium;
-}
-
-.product-list-container{
+  }
+  
+  .product-list-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 2rem;
-}
+  }
+
+  .product-container{
+    margin: 0 auto;
+  }

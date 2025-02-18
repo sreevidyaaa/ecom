@@ -1,0 +1,63 @@
+<!-- <p>sub-category works!</p> -->
+
+
+<!-- </div>  -->
+
+<!-- <h2>Product Home</h2>
+<nav>
+  <a routerLink="/product/home">Homeie</a> | 
+  <a routerLink="/product/bags">Bagsie</a>
+</nav> -->
+<!-- intial - unwanted -->
+<!-- <p>product-list works!</p> -->
+<!-- for web based content -->
+<!-- <box-icon name='user' size='lg'></box-icon> -->
+
+<!-- using css -->
+<!-- <i class='bx bx-user bx-lg'></i> -->
+<!-- {{products | json}}  this is called pipeing the json file - to see what is inside of this   JUST VERIFYING IF BACKEND IS PASSING THE DATA -->
+
+
+<div class="nav-bar">
+    <div class="nav-bar-cart">
+        <i class='bx bx-cart bx-sm' ></i>
+    </div>
+    <div class="nav-bar-logo" >   
+            LOGO 
+    </div>
+    <div class="nav-bar-menu">
+        <i class='bx bx-menu bx-sm' ></i>
+    </div>
+</div >
+
+<div>
+    <img class="banner" src="https://ik.imagekit.io/sreevidya/products/Bags/banner-dark_W5uq7Dv5o.jpg?updatedAt=1739355474698">
+</div>
+
+<div class="header">
+    <!-- <h2 class="collection-header">{{product.subcategory | uppercase }}</h2>   this is called pipeing / this is provided by angular -->
+    <!-- <h2 class="collection-header">{{product.subcategory | titleTransform }}</h2>        proviously this was inside *ngFor so that the shoulder bags header is not repeated multiple times -->
+    <h2 class="collection-header">{{routeName| titleTransform }}</h2>  
+    <!-- basically we are storing the subcategory name into a varibe so that it cam be just pasted in here instead of the loop  -->
+        <!-- this will prevent the heading gettting multiple times in each of the iteration -->
+    
+</div>
+<!-- <div *ngFor="let product of subProducts">  /*for array*/ -->
+
+
+
+<div class="product-list-container">
+    <div class="product-list" *ngFor="let product of subProducts">
+        <!-- <div class="product-container" [routerLink]="/detail"> -->
+        <div class="product-container" [routerLink]="['/detail', product.id]" >
+            <img class="product-list-img" [src]="product.imgUrl1">
+            <h5 class="product-list-text">{{product.brands}}</h5>
+        </div>
+    </div>
+<div>
+
+    
+<!-- </div> -->
+
+<!-- <router-outlet></router-outlet> -->
+<!-- </div>  -->

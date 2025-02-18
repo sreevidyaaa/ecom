@@ -34,11 +34,18 @@ export class ProductController {
                 // here the id passed in the http request gets stored in id ,i.e, localhost:2000/12345
                 //here the update info is being compied into the updateProductDto variable eg: title :"something"
                 //these are passed to productservice which does logiacal operations
+                //id is passed and id:string specifies the type for the id
         return this.ProductService.update(id, updateProductDto);
     }
 
     @Delete(':id')
     remove(@Param('id') id: string){
         return this.ProductService.remove(id);
+    }
+
+    @Get('category/:id') //specifies the id of the sub category
+    findCategory(@Param('id') id:string){ 
+        console.log(id)
+        return this.ProductService.findProductBycategory(id)
     }
 }

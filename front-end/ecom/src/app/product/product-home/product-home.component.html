@@ -15,45 +15,60 @@
 
 <div class="nav-bar">
     <div class="nav-bar-cart">
-        <i class='bx bx-cart bx-sm' ></i>
+        <i class='bx bx-cart bx-sm'></i>
     </div>
-    <div class="nav-bar-logo" >   
-            LOGO 
+    <div class="nav-bar-logo">
+        LOGO
     </div>
     <div class="nav-bar-menu">
-        <i class='bx bx-menu bx-sm' ></i>
-    </div>
-</div >
-
-<div class="header">
-    <h2 class="collection-header">New collection for Spring 2023</h2>
-</div>
-
-
-<div class="btn-container">   <!--button container -->
-   <h4 class="btn">Bags</h4>
-   <h4 class="btn">Makeup</h4>
-   <h4 class="btn">Clothing</h4>
-   <h4 class="btn">Accessories</h4>
-</div>
-
-<div class="product-list-container">
-    <div class="product-list" [routerLink]="['/product/bags']">
-        <img class="product-list-img" src="https://ik.imagekit.io/sreevidya/products/bags_300_vKpy1UGw8.png?updatedAt=1738246602082">
-        <h5 class="product-list-text">Bags</h5>
-    </div>
-    <div class="product-list">
-        <img class="product-list-img" src="https://ik.imagekit.io/sreevidya/products/makeuppp-removebg-preview.png?updatedAt=1738651621212">
-        <h5 class="product-list-text">Makeup</h5>
-    </div>
-    <div class="product-list">
-        <img class="product-list-img" src="https://ik.imagekit.io/sreevidya/products/dress_300_dzbEB-OXo.png?updatedAt=1738246602096">
-        <h5 class="product-list-text">Clothing</h5>
-    </div>
-    <div class="product-list">
-        <img class="product-list-img" src="https://ik.imagekit.io/sreevidya/products/watch-removebg-preview(2).png?updatedAt=1738322603190">
-        <h5 class="product-list-text">Accessories</h5>
+        <i class='bx bx-menu bx-sm'></i>
     </div>
 </div>
+<div>
 
-<router-outlet></router-outlet>
+    <div class="container">
+
+        <div class="header">
+            <h2 class="collection-header">New collection <br> Spring 2023</h2>
+            <i class=' bx bxs-chevron-down-circle bx-lg'></i>
+        </div>
+
+
+
+        <div class="land-img-container">
+            <img class="land-img"
+                src="https://ik.imagekit.io/sreevidya/products/Screen_Shot_2022-06-01_at_1.04.22_AM_lU5uC-XyW.png?updatedAt=1739780059444">
+        </div>
+
+
+        <div class="btn-container"> <!--button container -->
+            <h4 class="btn">Bags</h4>
+            <h4 class="btn">Makeup</h4>
+            <h4 class="btn">Clothing</h4>
+            <h4 class="btn">Accessories</h4>
+        </div>
+
+        <div class="product-list-container">
+            <div class="product-list" [routerLink]="['/bags']">
+                <img class="product-list-img"
+                    src="https://ik.imagekit.io/sreevidya/products/bags_300_vKpy1UGw8.png?updatedAt=1738246602082">
+                <h5 class="product-list-text">Bags</h5>
+            </div>
+            <div class="product-list">
+                <img class="product-list-img"
+                    src="https://ik.imagekit.io/sreevidya/products/makeuppp-removebg-preview.png?updatedAt=1738651621212">
+                <h5 class="product-list-text">Makeup</h5>
+            </div>
+            <div class="product-list">
+                <img class="product-list-img"
+                    src="https://ik.imagekit.io/sreevidya/products/dress_300_dzbEB-OXo.png?updatedAt=1738246602096">
+                <h5 class="product-list-text">Clothing</h5>
+            </div>
+            <div class="product-list">
+                <img class="product-list-img"
+                    src="https://ik.imagekit.io/sreevidya/products/watch-removebg-preview(2).png?updatedAt=1738322603190">
+                <h5 class="product-list-text">Accessories</h5>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { In, Repository, UpdateQueryBuilder } from 'typeorm';
+import { getRepositoryToken, InjectRepository } from '@nestjs/typeorm';
+import { In, Repository, UpdateQueryBuilder, getRepository } from 'typeorm';
 import { ProductEntity } from './enitties/product.entity';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -127,4 +127,25 @@ export class ProductService {
         //or
         // return id
     }
+
+    // async findProductBycategory(name: string){
+    //     const findProduct = await getRepository(ProductEntity).createQueryBuilder('product')
+    //     .where("product.subcategory = :name",{name}).getMany  //"name inside database" = {name} is beign passed as argument - if there are multiple print those
+    
+    //     console.log('name',name)
+    //     console.log('findproduct', findProduct)
+        
+    // }
+    async findProductBycategory(name: string) {
+        const findProduct = await this.productRepository
+            .createQueryBuilder('product')
+            .where("product.subcategory = :name", { name }) //"name inside database" = {name} is beign passed as argument 
+            .getMany(); // Add () to execute the query - if there are multiple print those
+    
+        console.log('name:', name);
+        console.log('findProduct:', findProduct);
+    
+        return findProduct; // Ensure the function returns data
+    }
+    
 }
