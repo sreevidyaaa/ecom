@@ -89,3 +89,9 @@
 .buy-btn-container{
   text-align: center;
 }
+
+.paypal-btn{
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 300px;
+}
